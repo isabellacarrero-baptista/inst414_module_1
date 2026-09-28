@@ -8,3 +8,4 @@ edges = pd.read_csv('cheating_network_edges.csv')
 #Directed graph
 g = nx.from_pandas_edgelist(edges, source="source", target="target", edge_attr=True, create_using=nx.DiGraph())
 
+#in-degree dictionary:
