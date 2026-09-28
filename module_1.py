@@ -9,3 +9,6 @@ edges = pd.read_csv('cheating_network_edges.csv')
 g = nx.from_pandas_edgelist(edges, source="source", target="target", edge_attr=True, create_using=nx.DiGraph())
 
 #in-degree dictionary:
+in_degree = dict(g.in_degree())
+#out-degree dictionary:
+out_degree = dict(g.out_degree())
