@@ -39,4 +39,11 @@ print(nodes.sort_values(by="total_degree", ascending=False).head(10))
 d_r_correlation = nodes["out_degree"].corr(nodes["in_degree"])
 print(d_r_correlation)
 
+#Scatter plot to compare the out degree and in degree
+plt.scatter(nodes["out_degree"], nodes["in_degree"])
+plt.xlabel("Distributors of cheating material")
+plt.ylabel("Receivers of cheating material")
+plt.title("Cheating distribution vs Cheating receiving")
+plt.show()
+
 
